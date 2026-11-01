@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg:          #080e2b;
+  --color-surface:     #0f1a3e;
+  --color-card:        #111f52;
+  --color-card-hover:  #142360;
+  --color-border:      #1e2f6a;
+  --color-border-dim:  #162454;
+  --color-muted:       #4d6391;
+  --color-subtle:      #6b7db3;
+  --color-body:        #c8d3f0;
+  --color-heading:     #e8eeff;
+
+  --color-cyan:        #00e5c8;
+  --color-cyan-dim:    rgba(0,229,200,0.12);
+  --color-green:       #2de28a;
+  --color-green-dim:   rgba(45,226,138,0.12);
+  --color-blue:        #5b8dee;
+  --color-blue-dim:    rgba(91,141,238,0.12);
+  --color-amber:       #f5a623;
+  --color-amber-dim:   rgba(245,166,35,0.12);
+  --color-pink:        #e25b8d;
+  --color-pink-dim:    rgba(226,91,141,0.12);
+  --color-red:         #ff6b6b;
+  --color-red-dim:     rgba(255,107,107,0.12);
+
+  --color-p1:          #00e5c8;
+  --color-p2:          #5b8dee;
+  --color-p3:          #f5a623;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #080e2b;
+  color: #c8d3f0;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Consistent heading rhythm */
+h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.01em; }
+
+/* Remove button tap highlight on mobile */
+button { -webkit-tap-highlight-color: transparent; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0f1a3e; }
+::-webkit-scrollbar-thumb { background: #1e2f6a; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3f80; }
+
+/* Selection */
+::selection { background: rgba(0,229,200,0.2); color: #e8eeff; }
