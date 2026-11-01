@@ -1,14 +1,16 @@
 import SectionHeader from '../../components/ui/SectionHeader'
 import { contextLayers } from '../../data/agentData'
+import useWindowWidth from '../../hooks/useWindowWidth'
 
 const LAYER_COLORS = ['#5b8dee', '#2de28a', '#00e5c8', '#f5a623']
 
 export default function P2ContextLayers() {
+  const isMobile = useWindowWidth() < 640
   return (
     <div style={{ background: '#111f52', border: '1px solid #1e2f6a', borderRadius: '1rem', overflow: 'hidden' }}>
       <SectionHeader title="Context layers" subtitle="What we fed the agent to ground its answers" />
 
-      <div style={{ padding: '1.25rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.875rem' }}>
+      <div style={{ padding: '1.25rem', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '0.875rem' }}>
         {contextLayers.map((layer, i) => (
           <div key={layer.id} style={{
             background: '#0f1a3e', border: '1px solid #1a2858', borderRadius: '0.75rem',

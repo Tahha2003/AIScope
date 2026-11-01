@@ -1,6 +1,7 @@
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts'
 import SectionHeader from '../../components/ui/SectionHeader'
 import { editTypes, regenReasons } from '../../data/productData'
+import useWindowWidth from '../../hooks/useWindowWidth'
 
 const REGEN_COLORS = ['#5b8dee','#f5a623','#00e5c8','#ff6b6b','#2de28a']
 
@@ -16,11 +17,12 @@ function CustomTooltip({ active, payload }) {
 }
 
 export default function P3EditTypes() {
+  const isMobile = useWindowWidth() < 640
   return (
     <div style={{ background: '#111f52', border: '1px solid #1e2f6a', borderRadius: '1rem', overflow: 'hidden' }}>
       <SectionHeader title="What do users change & why do they regenerate?" subtitle="Edit type breakdown · top regeneration reasons" />
 
-      <div style={{ padding: '1.25rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+      <div style={{ padding: '1.25rem', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '1.5rem' }}>
 
         {/* Donut */}
         <div>

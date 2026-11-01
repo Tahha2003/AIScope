@@ -1,8 +1,10 @@
 import StatCard from '../../components/ui/StatCard'
+import useWindowWidth from '../../hooks/useWindowWidth'
 
 export default function P1KpiRow({ kpis }) {
+  const isMobile = useWindowWidth() < 640
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: isMobile ? '0.75rem' : '1.25rem' }}>
       <StatCard icon="💸" label="AI Spend"      value={kpis.aiSpend.value}              delta={kpis.aiSpend.pct}    prefix="$"    accentColor="#5b8dee" />
       <StatCard icon="⏱"  label="Hours Saved"   value={kpis.hoursSaved.value}           delta={kpis.hoursSaved.pct} suffix=" hrs" accentColor="#00e5c8" />
       <StatCard icon="💎" label="Net Value"      value={Math.round(kpis.netValue.value)} delta={kpis.netValue.pct}   prefix="$"    accentColor="#2de28a" />
