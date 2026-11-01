@@ -41,7 +41,8 @@ export default function P2IterationChart() {
             <ReferenceLine y={80} stroke="#2de28a" strokeDasharray="4 4" strokeOpacity={0.5}
               label={{ value: 'Target 80%', position: 'right', fill: '#2de28a', fontSize: 11 }} />
             <Line type="monotone" dataKey="accuracy" stroke="#5b8dee" strokeWidth={2.5}
-              dot={{ fill: '#5b8dee', r: 5, strokeWidth: 0 }} activeDot={{ r: 6, fill: '#5b8dee', strokeWidth: 0 }} />
+              dot={{ fill: '#5b8dee', r: 5, strokeWidth: 0 }} activeDot={{ r: 6, fill: '#5b8dee', strokeWidth: 0 }}
+              isAnimationActive={false} />
           </LineChart>
         </ResponsiveContainer>
 

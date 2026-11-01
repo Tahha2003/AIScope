@@ -55,6 +55,7 @@ export default function P3CostTrend() {
               type="monotone" dataKey="costPerOutput" stroke="#f5a623" strokeWidth={2.5}
               dot={{ fill: '#f5a623', r: 5, strokeWidth: 0 }}
               activeDot={{ r: 6, fill: '#f5a623', strokeWidth: 0 }}
+              isAnimationActive={false}
             />
           </LineChart>
         </ResponsiveContainer>

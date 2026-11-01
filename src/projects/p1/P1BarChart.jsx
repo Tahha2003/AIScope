@@ -47,8 +47,8 @@ export default function P1BarChart({ month }) {
             <YAxis type="category" dataKey="team" tick={{ fill: '#c8d3f0', fontSize: 12 }} axisLine={false} tickLine={false} width={95} />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.03)' }} />
             <Legend iconType="circle" iconSize={8} formatter={v => v === 'cost' ? 'AI Cost' : 'Est. Value'} wrapperStyle={{ fontSize: 11, color: '#6b7db3', paddingTop: 12 }} />
-            <Bar dataKey="cost"  fill="#5b8dee" radius={[0, 3, 3, 0]}>{data.map(d => <Cell key={d.team} fill="#5b8dee" />)}</Bar>
-            <Bar dataKey="value" fill="#00e5c8" radius={[0, 3, 3, 0]}>{data.map(d => <Cell key={d.team} fill={TEAM_COLORS[d.team] ?? '#00e5c8'} />)}</Bar>
+            <Bar dataKey="cost"  fill="#5b8dee" radius={[0, 3, 3, 0]} isAnimationActive={false}>{data.map(d => <Cell key={d.team} fill="#5b8dee" />)}</Bar>
+            <Bar dataKey="value" fill="#00e5c8" radius={[0, 3, 3, 0]} isAnimationActive={false}>{data.map(d => <Cell key={d.team} fill={TEAM_COLORS[d.team] ?? '#00e5c8'} />)}</Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>

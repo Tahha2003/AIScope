@@ -30,7 +30,7 @@ export default function P3EditTypes() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <ResponsiveContainer width={110} height={110}>
               <PieChart>
-                <Pie data={editTypes} dataKey="pct" nameKey="type" cx="50%" cy="50%" innerRadius={32} outerRadius={52} paddingAngle={3}>
+                <Pie data={editTypes} dataKey="pct" nameKey="type" cx="50%" cy="50%" innerRadius={32} outerRadius={52} paddingAngle={3} isAnimationActive={false}>
                   {editTypes.map(d => <Cell key={d.type} fill={d.color} />)}
                 </Pie>
                 <Tooltip content={<CustomTooltip />} />

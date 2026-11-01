@@ -69,7 +69,8 @@ export default function P1TrendChart() {
             />
             {TEAMS_LIST.map(t => (
               <Area key={t} type="monotone" dataKey={t} stroke={TEAM_COLORS[t]} strokeWidth={2}
-                fill={`url(#tg-${t})`} dot={false} activeDot={{ r: 4, strokeWidth: 0 }} />
+                fill={`url(#tg-${t})`} dot={false} activeDot={{ r: 4, strokeWidth: 0 }}
+                isAnimationActive={false} />
             ))}
           </AreaChart>
         </ResponsiveContainer>

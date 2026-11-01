@@ -40,10 +40,10 @@ export default function P2AccuracyChart({ categories }) {
             <YAxis type="category" dataKey="category" width={135} tick={{ fill: '#c8d3f0', fontSize: 11 }} axisLine={false} tickLine={false} />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.02)' }} />
             <Legend iconType="circle" iconSize={8} formatter={v => v === 'before' ? 'Before context' : 'After context'} wrapperStyle={{ fontSize: 11, color: '#6b7db3', paddingTop: 12 }} />
-            <Bar dataKey="before" fill="#2a3f7a" radius={[0, 3, 3, 0]} name="before">
+            <Bar dataKey="before" fill="#2a3f7a" radius={[0, 3, 3, 0]} name="before" isAnimationActive={false}>
               <LabelList dataKey="before" position="right" style={{ fill: '#4d6391', fontSize: 11 }} formatter={v => `${v}%`} />
             </Bar>
-            <Bar dataKey="after" fill="#5b8dee" radius={[0, 3, 3, 0]} name="after">
+            <Bar dataKey="after" fill="#5b8dee" radius={[0, 3, 3, 0]} name="after" isAnimationActive={false}>
               <LabelList dataKey="after" position="right" style={{ fill: '#5b8dee', fontSize: 11 }} formatter={v => `${v}%`} />
             </Bar>
           </BarChart>
