@@ -113,3 +113,4 @@ npm run lint       # run oxlint
 All data is illustrative mock data. No backend or API required. Single-page React app with client-side navigation (no router dependency).
 
 > Note: All Tailwind utility classes are paired with inline `style` props throughout the codebase to ensure layout correctness under the global CSS reset (`* { margin: 0; padding: 0 }`).
+
